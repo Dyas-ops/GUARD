@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+<!-- 🍃 FALLING LEAVES -->
+<div class="leaves">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="container">
+    <h1>GUARD</h1>
+    <p>Create Your Hiking Account</p>
+
+    <form onsubmit="registerUser(event)">
+
+        <input type="text" placeholder="Full Name" required>
+        <input type="number" placeholder="Age" required>
+
+        <!-- 🔥 IDENTITAS (TETAP RAPI, GAK NGERUSAK DESIGN) -->
+        <div class="file-group">
+            <p class="file-text">Student Card / National Identity Card</p>
+            <input type="file" required>
+        </div>
+
+        <input type="text" placeholder="Health History" required>
+
+        <button type="submit">Register</button>
+
+        <p>Already have an account? <a href="login.html">Login</a></p>
+
+    </form>
+</div>
+
+<script>
+function registerUser(e) {
+    e.preventDefault();
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<!-- ❄️ SALJU (TETAP ADA) -->
+<div class="snow">
+    <span>❄️</span>
+    <span>❄️</span>
+    <span>❄️</span>
+    <span>❄️</span>
+</div>
+
+<div class="container">
+    <h1>GUARD</h1>
+    <p>Access Your Account</p>
+
+    <form onsubmit="loginUser(event)">
+
+        <input type="text" placeholder="Full Name" required>
+
+    <!-- 🔥 TEXT + FILE TANPA MERUSAK DESIGN -->
+    <div class="file-group">
+        <p class="file-text">Student Card / National Identity Card</p>
+        <input type="file" required>
+    </div>
+
+        <button type="submit">Login</button>
+
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+
+    </form>
+</div>
+
+<script>
+function loginUser(e) {
+    e.preventDefault();
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>

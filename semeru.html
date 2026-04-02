@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Semeru</title>
+    <link rel="stylesheet" href="semeru.css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Mount Semeru</h1>
+            <p>East Java, Indonesia • 3,676 mdpl</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- INFO CARDS -->
+        <div class="cards">
+            <div class="card">🌤 Weather<br><span>Cold & Windy</span></div>
+            <div class="card">🌡 Temperature<br><span>0–8°C</span></div>
+            <div class="card">⛰ Elevation<br><span>3,676 mdpl</span></div>
+            <div class="card">🧗 Difficulty<br><span>Hard</span></div>
+        </div>
+
+        <!-- LOGISTICS -->
+        <div class="section">
+            <h2>🎒 Required Logistics</h2>
+            <ul>
+                <li>🧥 Thick Jacket</li>
+                <li>🥾 Hiking Boots</li>
+                <li>🧤 Gloves</li>
+                <li>🧢 Head Cover</li>
+                <li>🍫 High-calorie food</li>
+                <li class="highlight">🔥 Sodium Acetate Sleeping Bag, Optional for Advanced Hikers</li>
+            </ul>
+            <p class="level-status">🏕 Rental at Basecamp</p>
+    <ul>
+        <li>💰 Sleeping Bag Sodium Acetate (pay if used)</li>
+        <li>🧥 Jacket</li>
+        <li>🔦 Headlamp</li>
+        <li>⛺ Tent</li>
+    </ul>
+    
+        </div>
+        <!-- BEGINNER & MASTER -->
+<div class="level-recommendation">
+    <h2>🧭 Beginner & Master Recommendation</h2>
+
+    <p class="level-status">👶 Beginner: <b>STRONGLY RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Bring Sleeping Bag Sodium Acetate (extreme cold)</li>
+        <li>🧥 Thick jacket & layered clothing</li>
+        <li>🩹 Complete first aid kit</li>
+        <li>🥤 Extra water supply</li>
+        <li>🍫 High-calorie emergency food</li>
+        <li>🔦 Headlamp / flashlight</li>
+    </ul>
+
+    <p class="level-status">🧗 Master: <b>RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Sleeping bag recommended for safety</li>
+        <li>🎒 Complete hiking gear</li>
+        <li>⚠️ Be aware of extreme terrain & long distance</li>
+    </ul>
+
+</div>
+
+        <!-- WARNING -->
+        <div class="warning">
+            ⚠️ Notice <br>
+            - Extreme cold at summit <br>
+            - Volcanic eruption (Jonggring Saloko) <br>
+            - Long tracking distance <br>
+            - High fatigue risk
+        </div>
+        <!-- HYPOTHERMIA FIRST AID -->
+<div class="hypothermia">
+    <h2>🚑 Hypothermia First Aid</h2>
+
+    <ul>
+        <li>❄️ Recognize symptoms: intense shivering, confusion, weakness</li>
+        <li>🛑 Stop hiking & move to a safer, warmer spot</li>
+        <li>🧥 Add multiple warm layers immediately</li>
+        <li>🛌 Use Sleeping Bag to retain body heat</li>
+        <li>🔥 Warm slowly (avoid direct extreme heat)</li>
+        <li>⚠️ Contact SAR team / evacuate if condition worsens</li>
+    </ul>
+</div>
+
+        <!-- RECOMMENDATION -->
+        <div class="recommendation">
+            <h2>🧠 Sleeping Bag Sodium Acetate Recommendation</h2>
+            <p class="status">🔴 REQUIRED</p>
+
+            <p>Based on:</p>
+            <ul>
+                <li>Temperature near freezing (0–8°C)</li>
+                <li>High altitude & extreme exposure</li>
+                <li>Hard difficulty trail</li>
+                <li>Beginner & Master safety protocol include Sleeping Bag Sodium Acetate</li>
+                <li>Advance Hikers must bring Sleeping Bag Sodium Acetate</li>
+            </ul>
+        </div>
+
+        <!-- RISK -->
+        <div class="risk">
+            Hypothermia Risk: <span>HIGH 🔴</span>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="buttons">
+           <button class="start" onclick="startHiking('Mount Semeru')">
+    Start Hiking
+</button>
+            <button onclick="history.back()">← Back</button>
+        </div>
+
+    </div>
+<script>
+function startHiking(mountain) {
+    localStorage.setItem("selectedMountain", mountain);
+    window.location.href = "hiking.html";
+}
+</script>
+</body>
+</html>

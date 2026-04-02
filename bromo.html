@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Bromo</title>
+    <link rel="stylesheet" href="bromo.css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Mount Bromo</h1>
+            <p>East Java, Indonesia • 2,329 mdpl</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- INFO CARDS -->
+        <div class="cards">
+            <div class="card">🌤 Weather<br><span>Sunny & Windy</span></div>
+            <div class="card">🌡 Temperature<br><span>10–15°C</span></div>
+            <div class="card">⛰ Elevation<br><span>2,329 mdpl</span></div>
+            <div class="card">🧗 Difficulty<br><span>Easy</span></div>
+        </div>
+
+        <!-- LOGISTICS -->
+        <div class="section">
+            <h2>🎒 Required Logistics</h2>
+            <ul>
+                <li>🧥 Light Jacket</li>
+                <li>🥾 Hiking Shoes</li>
+                <li>🎒 Small Backpack</li>
+                <li>🧣 Scarf / Mask (for dust)</li>
+                <li class="highlight">🔥 Sodium Acetate Sleeping Bag, Optional for Advanced Hikers</li>
+            </ul>
+            <p class="level-status">🏕 Rental at Basecamp</p>
+    <ul>
+        <li>💰 Sleeping Bag Sodium Acetate (pay if used)</li>
+        <li>🧥 Jacket</li>
+        <li>🧣 Mask / buff</li>
+        <li>🔦 Headlamp</li>
+        <li>⛺ Tent (optional for camping)</li>
+    </ul>
+    
+        </div>
+        <!-- BEGINNER & MASTER -->
+<!-- BEGINNER & MASTER -->
+<div class="level-recommendation">
+    <h2>🧭 Beginner & Master Recommendation</h2>
+
+    <p class="level-status">👶 Beginner: <b>STRONGLY RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Bring Sleeping Bag Sodium Acetate (cold early morning)</li>
+        <li>🧥 Warm jacket (temperature drops before sunrise)</li>
+        <li>🥤 Extra water (dry & dusty environment)</li>
+        <li>🧣 Mask / buff (sand & volcanic dust)</li>
+        <li>🔦 Headlamp for sunrise hike</li>
+    </ul>
+
+    <p class="level-status">🧗 Master: <b>RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Sleeping bag recommended for comfort</li>
+        <li>🧥 Light warm layer</li>
+        <li>⚠️ Adjust based on wind & weather condition</li>
+    </ul>
+
+</div>
+
+        <!-- WARNING -->
+        <div class="warning">
+            ⚠️ Notice <br>
+            - Strong wind & dust <br>
+            - Sudden temperature drop at dawn <br>
+            - Volcanic activity area
+        </div>
+        <!-- HYPOTHERMIA FIRST AID -->
+<div class="hypothermia">
+    <h2>🚑 Hypothermia First Aid</h2>
+
+    <ul>
+        <li>❄️ Recognize symptoms: shivering, confusion, fatigue</li>
+        <li>🛑 Move to a sheltered area (avoid cold wind & dust)</li>
+        <li>🧥 Add warm layers (jacket, scarf)</li>
+        <li>🛌 Use Sleeping Bag to maintain body heat</li>
+        <li>🔥 Warm gradually (warm drink if available)</li>
+        <li>⚠️ Contact SAR team / evacuate if condition worsens</li>
+    </ul>
+</div>
+
+        <!-- RECOMMENDATION -->
+        <div class="recommendation">
+            <h2>🧠 Sodium Acetate Sleeping Bag Recommendation</h2>
+            <p class="status">🟡 RECOMMENDED</p>
+
+            <p>Based on:</p>
+            <ul>
+                <li>Moderate temperature (10–15°C)</li>
+                <li>Low difficulty trail</li>
+                <li>Optional for Advanced hikers</li>
+            </ul>
+        </div>
+
+        <!-- RISK -->
+        <div class="risk">
+            Hypothermia Risk: <span>MEDIUM 🟡</span>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="buttons">
+            <button class="start" onclick="startHiking('Mount Bromo')">
+    Start Hiking
+</button>
+            <button onclick="history.back()">← Back</button>
+        </div>
+
+    </div>
+<script>
+function startHiking(mountain) {
+    localStorage.setItem("selectedMountain", mountain);
+    window.location.href = "hiking.html";
+}
+</script>
+</body>
+</html>

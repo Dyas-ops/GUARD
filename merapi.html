@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Merapi</title>
+    <link rel="stylesheet" href="merapi.css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Mount Merapi</h1>
+            <p>Central Java, Indonesia • 2,930 mdpl</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- INFO CARDS -->
+        <div class="cards">
+            <div class="card">🌤 Weather<br><span>Hot & Windy</span></div>
+            <div class="card">🌡 Temperature<br><span>10–20°C</span></div>
+            <div class="card">⛰ Elevation<br><span>2,930 mdpl</span></div>
+            <div class="card">🧗 Difficulty<br><span>Medium</span></div>
+        </div>
+
+        <!-- LOGISTICS -->
+        <div class="section">
+            <h2>🎒 Required Logistics</h2>
+            <ul>
+                <li>🧥 Jacket</li>
+                <li>🥾 Hiking Shoes</li>
+                <li>😷 Mask (volcanic dust)</li>
+                <li>🧢 Head Cover</li>
+                <li>💧 Water Supply</li>
+                <li class="highlight">🔥 Sodium Acetate Sleping Bag, Optional for Advanced Hikers</li>
+            </ul>
+            <p class="level-status">🏕 Rental at Basecamp</p>
+    <ul>
+        <li>💰 Sleeping Bag Sodium Acetate (pay if used)</li>
+        <li>🧣 Mask / respirator</li>
+        <li>🧥 Jacket</li>
+        <li>🔦 Headlamp</li>
+        <li>⛺ Tent</li>
+    </ul>
+    
+        </div>
+        <!-- BEGINNER & MASTER -->
+<div class="level-recommendation">
+    <h2>🧭 Beginner & Master Recommendation</h2>
+
+    <p class="level-status">👶 Beginner: <b>STRONGLY RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Bring Sleeping Bag Sodium Acetate (cold night temperature)</li>
+        <li>🧣 Mask / respirator (volcanic ash & gas)</li>
+        <li>🩹 Complete first aid kit</li>
+        <li>🥤 Extra water supply</li>
+        <li>🔦 Headlamp / flashlight</li>
+    </ul>
+
+    <p class="level-status">🧗 Master: <b>RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Sleeping bag recommended for safety</li>
+        <li>🧣 Mask / protection gear</li>
+        <li>⚠️ Monitor volcanic activity & weather updates</li>
+    </ul>
+
+</div>
+
+        <!-- WARNING -->
+        <div class="warning">
+            ⚠️ Notice <br>
+            - Active volcano (frequent eruptions) <br>
+            - Hot gas & ash exposure <br>
+            - Rapid weather changes <br>
+            - Restricted zones near summit
+        </div>
+        <!-- HYPOTHERMIA FIRST AID -->
+<div class="hypothermia">
+    <h2>🚑 Hypothermia First Aid</h2>
+
+    <ul>
+        <li>❄️ Recognize symptoms: shivering, confusion, loss of coordination</li>
+        <li>🛑 Move away from exposed & windy volcanic areas</li>
+        <li>🧥 Add warm layers and protect from ash & gas</li>
+        <li>🛌 Use Sleeping Bag to maintain body heat</li>
+        <li>🔥 Warm gradually (warm drink if possible)</li>
+        <li>⚠️ Contact SAR team / evacuate if condition worsens</li>
+    </ul>
+</div>
+
+        <!-- RECOMMENDATION -->
+        <div class="recommendation">
+            <h2>🧠 Sodium Acetate Sleping Bag Recommendation</h2>
+            <p class="status">🟠 CONDITIONAL</p>
+
+            <p>Based on:</p>
+            <ul>
+                <li>Moderate temperature but unstable conditions</li>
+                <li>Medium difficulty trail</li>
+                <li>Required for Beginner & users with medical history</li>
+                <li>Optional for Advanced Hikers</li>
+            </ul>
+        </div>
+
+        <!-- RISK -->
+        <div class="risk">
+            Hypothermia Risk: <span>MEDIUM 🟡</span>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="buttons">
+           <button class="start" onclick="startHiking('Mount Merapi')">
+    Start Hiking
+</button>
+            <button onclick="history.back()">← Back</button>
+        </div>
+
+    </div>
+<script>
+function startHiking(mountain) {
+    localStorage.setItem("selectedMountain", mountain);
+    window.location.href = "hiking.html";
+}
+</script>
+</body>
+</html>

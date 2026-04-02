@@ -1,0 +1,161 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+
+    /* 🔥 PASTIKAN NAMA FILE SESUAI */
+    background-image: url("rajaampat.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* CONTAINER */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* PROFILE */
+.profile h2 {
+    margin: 0;
+}
+
+.profile p {
+    opacity: 0.8;
+}
+
+.level {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: teal;
+    margin-top: 5px;
+}
+
+/* GRID */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.box {
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* DECISION */
+.decision {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+.actions button {
+    width: 180px;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: teal;
+    color: white;
+}
+/* 🔥 DEFAULT (biar gak kosong) */
+.level {
+    background: teal;
+}
+
+.actions button {
+    background: teal;
+    color: white;
+}
+
+/* 🔵 RINJANI (BIRU) */
+.rinjani .level,
+.rinjani .actions button {
+    background: #3498db;
+}
+
+/* 🔵 SEMERU (SAMA KAYAK RINJANI) */
+.semeru .level,
+.semeru .actions button {
+    background: #3498db;
+}
+
+/* 🟠 BROMO */
+.bromo .level,
+.bromo .actions button {
+    background: #e67e22;
+}
+
+/* 🔴 MERAPI */
+.merapi .level,
+.merapi .actions button {
+    background: #e74c3c;
+}
+
+/* 🟤 AGUNG */
+.agung .level,
+.agung .actions button {
+    background: #8e5a2b;
+}
+
+/* 🔙 BACK BUTTON BEDA SEDIKIT (BIAR ADA HIERARCHY) */
+.actions .back {
+    opacity: 0.8;
+}
+
+.back {
+    background: gray;
+}
+
+/* 🧗 ANIMATION */
+.climbers span {
+    position: fixed;
+    top: -50px;
+    font-size: 22px;
+    animation: fall linear infinite;
+}
+
+.climbers span:nth-child(1){left:10%;animation-duration:8s;}
+.climbers span:nth-child(2){left:50%;animation-duration:10s;}
+.climbers span:nth-child(3){left:80%;animation-duration:9s;}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(110vh); }
+}
+
+/* 🔥 THEME WARNA (TIDAK PAKAI BG PER GUNUNG) */
+
+.rinjani .box, .rinjani .decision {
+    background: rgba(0, 100, 200, 0.4);
+}
+
+.bromo .box, .bromo .decision {
+    background: rgba(200, 120, 50, 0.5);
+}
+
+.semeru .box, .semeru .decision {
+    background: rgba(0, 100, 200, 0.4);
+}
+
+.merapi .box, .merapi .decision {
+    background: rgba(200, 50, 50, 0.5);
+}
+
+.agung .box, .agung .decision {
+    background: rgba(120, 80, 40, 0.5);
+}

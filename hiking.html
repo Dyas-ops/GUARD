@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiking Session</title>
+<link rel="stylesheet" href="hiking.css">
+</head>
+
+<body>
+
+<!-- 🧗 ANIMATION -->
+<div class="climbers">
+    <span>🧗</span>
+    <span>🧗</span>
+    <span>🧗</span>
+</div>
+
+<div class="container">
+
+    <!-- PROFILE -->
+    <div class="profile">
+        <h2 id="username">User</h2>
+        <p id="mountain">You selected: Mountain</p>
+        <span class="level">Beginner</span>
+    </div>
+
+    <!-- GRID -->
+    <div class="info-grid">
+        <div class="box" id="weather"></div>
+        <div class="box" id="temp"></div>
+        <div class="box" id="height"></div>
+        <div class="box" id="status"></div>
+    </div>
+
+    <!-- DECISION -->
+    <div class="decision" id="decisionText"></div>
+
+    <!-- BUTTON -->
+    <div class="actions">
+        <button onclick="goToCard()">💳 Smart Hiking Card</button>
+        <button class="back" onclick="goBack()">🔙 Back</button>
+    </div>
+
+</div>
+
+<script>
+// USER
+let user = localStorage.getItem("username") || "Guest";
+document.getElementById("username").innerText = user;
+
+// 🔥 AMBIL DATA GUNUNG (ANTI ERROR)
+let raw = localStorage.getItem("selectedMountain") || "";
+let mountain = raw.toLowerCase();
+
+if (mountain.includes("rinjani")) mountain = "Mount Rinjani";
+else if (mountain.includes("bromo")) mountain = "Mount Bromo";
+else if (mountain.includes("semeru")) mountain = "Mount Semeru";
+else if (mountain.includes("merapi")) mountain = "Mount Merapi";
+else if (mountain.includes("agung")) mountain = "Mount Agung";
+else mountain = "Mount Semeru";
+
+document.getElementById("mountain").innerText = "You selected: " + mountain;
+
+// 🔥 DATA
+let data = {
+    "Mount Rinjani": {
+        weather: "🌤 Cold",
+        temp: "🌡 5°C",
+        height: "⛰ 3726 mdpl",
+        status: "🎒 Hard",
+        decision: "Sleeping bag REQUIRED (cold & high altitude)",
+        theme: "rinjani"
+    },
+    "Mount Bromo": {
+        weather: "🌫 Foggy",
+        temp: "🌡 12°C",
+        height: "⛰ 2329 mdpl",
+        status: "🎒 Easy",
+        decision: "Sleeping bag optional",
+        theme: "bromo"
+    },
+    "Mount Semeru": {
+        weather: "❄️ Cold",
+        temp: "🌡 3°C",
+        height: "⛰ 3676 mdpl",
+        status: "🎒 Extreme",
+        decision: "Sleeping bag REQUIRED",
+        theme: "semeru"
+    },
+    "Mount Merapi": {
+        weather: "🌋 Hot",
+        temp: "🌡 18°C",
+        height: "⛰ 2911 mdpl",
+        status: "🎒 Danger",
+        decision: "Sleeping Bag Optional",
+        theme: "merapi"
+    },
+    "Mount Agung": {
+        weather: "🌤 Dry",
+        temp: "🌡 8°C",
+        height: "⛰ 3031 mdpl",
+        status: "🎒 Hard",
+        decision: "Sleeping bag REQUIRED",
+        theme: "agung"
+    }
+};
+
+// APPLY
+let d = data[mountain];
+
+document.getElementById("weather").innerText = d.weather;
+document.getElementById("temp").innerText = d.temp;
+document.getElementById("height").innerText = d.height;
+document.getElementById("status").innerText = d.status;
+document.getElementById("decisionText").innerText = d.decision;
+
+// THEME
+document.body.classList.add(d.theme);
+
+// NAV
+function goToCard() {
+    window.location.href = "card.html";
+}
+
+function goBack() {
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>

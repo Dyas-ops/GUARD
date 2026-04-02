@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Agung</title>
+    <link rel="stylesheet" href="agung.css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Mount Agung</h1>
+            <p>Bali, Indonesia • 3,031 mdpl</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- CARDS -->
+        <div class="cards">
+            <div class="card">🌤 Weather<br><span>Cold & Dry</span></div>
+            <div class="card">🌡 Temperature<br><span>5–12°C</span></div>
+            <div class="card">⛰ Elevation<br><span>3,031 mdpl</span></div>
+            <div class="card">🧗 Difficulty<br><span>Hard</span></div>
+        </div>
+
+        <!-- LOGISTICS -->
+        <div class="section">
+            <h2>🎒 Required Logistics</h2>
+            <ul>
+                <li>🧥 Thick Jacket</li>
+                <li>🥾 Hiking Boots</li>
+                <li>🧤 Gloves</li>
+                <li>🧢 Head Cover</li>
+                <li>🍫 High Energy Food</li>
+                <li class="highlight">🔥 Sodium Acetate Sleeping Bag, Optional for Advanced Hikers</li>
+            </ul>
+            <p class="level-status">🏕 Rental at Basecamp</p>
+    <ul>
+        <li>💰 Sleeping Bag Sodium Acetate (pay if used)</li>
+        <li>🧥 Jacket</li>
+        <li>🔦 Headlamp</li>
+        <li>⛺ Tent</li>
+    </ul>
+
+        </div>
+        <!-- BEGINNER & MASTER -->
+<div class="level-recommendation">
+    <h2>🧭 Beginner & Master Recommendation</h2>
+
+    <p class="level-status">👶 Beginner: <b>STRONGLY RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Bring Sleeping Bag Sodium Acetate (cold & windy summit)</li>
+        <li>🧥 Thick jacket & windproof layer</li>
+        <li>🩹 Complete first aid kit</li>
+        <li>🥤 Extra water supply</li>
+        <li>🍫 High-calorie emergency food</li>
+        <li>🔦 Headlamp / flashlight</li>
+    </ul>
+
+    <p class="level-status">🧗 Master: <b>RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Sleeping bag recommended for safety</li>
+        <li>🎒 Standard hiking gear</li>
+        <li>⚠️ Be aware of steep terrain & strong wind</li>
+    </ul>
+
+</div>
+
+        <!-- WARNING -->
+        <div class="warning">
+            ⚠️ Notice <br>
+            - Steep & long trekking route <br>
+            - Extreme fatigue risk <br>
+            - Sacred area (restricted zones) <br>
+            - Sudden weather changes
+        </div>
+        <!-- HYPOTHERMIA FIRST AID -->
+<div class="hypothermia">
+    <h2>🚑 Hypothermia First Aid</h2>
+
+    <ul>
+        <li>❄️ Recognize symptoms: shivering, fatigue, confusion</li>
+        <li>🛑 Move to a sheltered area (avoid strong wind exposure)</li>
+        <li>🧥 Add warm & windproof layers</li>
+        <li>🛌 Use Sleeping Bag to maintain body heat</li>
+        <li>🔥 Warm gradually (warm drink if available)</li>
+        <li>⚠️ Contact SAR team / evacuate if condition worsens</li>
+    </ul>
+</div>
+
+        <!-- RECOMMENDATION -->
+        <div class="recommendation">
+            <h2>🧠 Sodium Acetate Sleeping Bag Recommendation</h2>
+            <p class="status">🔴 REQUIRED</p>
+
+            <p>Based on:</p>
+            <ul>
+                <li>Low temperature (5–12°C)</li>
+                <li>High altitude exposure</li>
+                <li>Hard trekking route</li>
+                <li>Beginner & Master safety protocol include Sodium Acetate Sleeping Bag</li>
+                <li>Advanced Hikers must bring Sodium Acetate Sleeping Bag</li>
+            </ul>
+        </div>
+
+        <!-- RISK -->
+        <div class="risk">
+            Hypothermia Risk: <span>HIGH 🔴</span>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="buttons">
+           <button class="start" onclick="startHiking('Mount Agung')">
+    Start Hiking
+</button>
+            <button onclick="history.back()">← Back</button>
+        </div>
+
+    </div>
+    <script>
+function startHiking(mountain) {
+    localStorage.setItem("selectedMountain", mountain);
+    window.location.href = "hiking.html";
+}
+</script>
+
+</body>
+</html>

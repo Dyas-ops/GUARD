@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Rinjani - GUARD</title>
+    <link rel="stylesheet" href="rinjani.css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Mount Rinjani</h1>
+            <p>Lombok, Indonesia • 3,726 mdpl</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- INFO CARDS -->
+        <div class="cards">
+            <div class="card">🌤 Weather<br><span>Windy & Foggy</span></div>
+            <div class="card">🌡 Temperature<br><span>5–10°C</span></div>
+            <div class="card">⛰ Elevation<br><span>3,726 mdpl</span></div>
+            <div class="card">🧗 Difficulty<br><span>Hard</span></div>
+        </div>
+
+        <!-- LOGISTICS -->
+        <div class="section">
+            <h2>🎒 Required Logistics</h2>
+            <ul>
+                <li>🧥 Thick Jacket</li>
+                <li>⛺ Tent</li>
+                <li>🎒 Carrier</li>
+                <li>🧦 Extra Socks</li>
+                <li class="highlight">🔥 Sodium Acetate Sleeping Bag, Optional for Advanced Hikers </li>
+            </ul>
+            <p class="level-status">🏕 Rental at Basecamp</p>
+    <ul>
+        <li>💰 Sleeping Bag Sodium Acetate (pay if used)</li>
+        <li>⛺ Tent</li>
+        <li>🧥 Jacket</li>
+        <li>🔦 Headlamp</li>
+    </ul>
+    
+        </div>
+        <!-- BEGINNER & MASTER -->
+<!-- BEGINNER & MASTER -->
+<div class="level-recommendation">
+    <h2>🧭 Beginner & Master Recommendation</h2>
+
+    <p class="level-status">👶 Beginner: <b>STRONGLY RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Bring Sleeping Bag Sodium Acetate (backup warmth)</li>
+        <li>🩹 Complete first aid kit</li>
+        <li>🥤 Extra water supply</li>
+        <li>🍫 Extra high-calorie food</li>
+        <li>🔦 Headlamp / flashlight</li>
+    </ul>
+
+    <p class="level-status">🧗 Master: <b>RECOMMENDED</b></p>
+    <ul>
+        <li>🛌 Sleeping bag recommended for safety</li>
+        <li>🎒 Standard hiking gear</li>
+        <li>⚠️ Adjust based on weather & condition</li>
+    </ul>
+
+</div>
+
+        <!-- WARNING -->
+        <div class="warning">
+            ⚠️ High Risk Area <br>
+            - Extreme cold temperature <br>
+            - Strong wind <br>
+            - High risk of hypothermia
+        </div>
+        <!-- HYPOTHERMIA FIRST AID -->
+<div class="hypothermia">
+    <h2>🚑 Hypothermia First Aid</h2>
+
+    <ul>
+        <li>❄️ Recognize symptoms: shivering, confusion, extreme fatigue</li>
+        <li>🛑 Move to a warmer place & avoid direct wind</li>
+        <li>🧥 Replace wet clothes with dry layers</li>
+        <li>🛌 Use Sleeping Bag Sodium Acetate to stabilize body temperature</li>
+        <li>🔥 Warm gradually (warm drink if conscious)</li>
+        <li>⚠️ Contact SAR team / evacuate if condition worsens</li>
+    </ul>
+</div>
+
+        <!-- SYSTEM RECOMMENDATION -->
+        <div class="recommendation">
+            <h2>🧠 Sodium Acetate Sleeping Bag Recommendation</h2>
+            <p class="status">🔴 REQUIRED</p>
+
+            <p>Reason:</p>
+            <ul>
+                <li>High difficulty trail</li>
+                <li>Low temperature (5–10°C)</li>
+                <li>Recommended for Beginner & Master</li>
+                <li>Optional for Advanced Hikers</li>
+            </ul>
+        </div>
+
+        <!-- RISK -->
+        <div class="risk">
+            Hypothermia Risk: <span>HIGH 🔴</span>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="buttons">
+           <button class="start" onclick="startHiking('Mount Rinjani')">
+    Start Hiking
+</button>
+            <button onclick="history.back()">← Back</button>
+        </div>
+
+    </div>
+<script>
+function startHiking(mountain) {
+    localStorage.setItem("selectedMountain", mountain);
+    window.location.href = "hiking.html";
+}
+</script>
+</body>
+</html>

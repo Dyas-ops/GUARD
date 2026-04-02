@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GUARD</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- BACKGROUND EMOJI GUNUNG JATUH -->
+    <div class="mountains">
+        <span>🏔</span>
+        <span>🏔</span>
+        <span>🏔</span>
+        <span>🏔</span>
+        <span>🏔</span>
+        <span>🏔</span>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+        <h1>Find Your Mountain</h1>
+
+        <input 
+            type="text" 
+            id="search" 
+            placeholder="Search mountain..." 
+            onkeyup="searchMountain()"
+        >
+
+        <div id="mountainList"></div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

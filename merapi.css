@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1a0f0f;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 60vh;
+    background: url('merapi.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+/* CONTENT */
+.content {
+    padding: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: -50px;
+}
+
+.card {
+    background: rgba(255, 100, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* SECTION */
+.section {
+    margin-top: 25px;
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+.highlight {
+    color: orange;
+    font-weight: bold;
+}
+
+/* WARNING */
+.warning {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 69, 0, 0.2);
+    border-left: 5px solid orangered;
+    border-radius: 10px;
+}
+
+/* RECOMMENDATION */
+.recommendation {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 140, 0, 0.1);
+    border-left: 5px solid orange;
+    border-radius: 10px;
+}
+/* 🔥 LEVEL RECOMMENDATION - MERAPI */
+.level-recommendation {
+    margin-top: 20px;
+
+    background: rgba(231, 76, 60, 0.2); /* 🔴 transparan merah */
+
+    border-left: 5px solid #e74c3c; /* 🔴 garis lava */
+
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.level-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.level-recommendation ul {
+    margin: 5px 0 10px 20px;
+}
+.status {
+    font-size: 20px;
+    font-weight: bold;
+}
+/* 🔥 HYPOTHERMIA BOX - MERAPI (LAVA STYLE) */
+.hypothermia {
+    margin-top: 20px;
+
+    background: rgba(255, 69, 0, 0.18); /* 🔥 lava orange-red */
+
+    border-left: 5px solid #ff4500; /* 🔥 garis lava */
+
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.hypothermia h2 {
+    margin-bottom: 10px;
+}
+
+.hypothermia ul {
+    margin-left: 20px;
+}
+/* RISK */
+.risk {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* BUTTON */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start {
+    background: orangered;
+    color: white;
+}
