@@ -1,0 +1,470 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(5,10,20,0.70),
+        rgba(5,10,20,0.85)
+    ),
+    url("jayawijaya.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+
+    color:white;
+    position:relative;
+}
+
+/* BLUR */
+.bg-blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+}
+
+.blur1{
+    width:300px;
+    height:300px;
+
+    background:rgba(120,190,255,0.18);
+
+    top:-100px;
+    right:-100px;
+}
+
+.blur2{
+    width:320px;
+    height:320px;
+
+    background:rgba(180,220,255,0.12);
+
+    bottom:-120px;
+    left:-120px;
+}
+
+/* NAVBAR */
+.navbar{
+    width:100%;
+    padding:30px 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative;
+    z-index:5;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:14px;
+
+    background:rgba(180,220,255,0.10);
+
+    border:1px solid rgba(180,220,255,0.18);
+
+    backdrop-filter:blur(10px);
+
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:rgba(180,220,255,0.16);
+}
+
+/* MAIN */
+.main-container{
+    width:100%;
+    min-height:85vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 70px 60px;
+
+    gap:60px;
+
+    position:relative;
+    z-index:2;
+}
+
+/* LOGIN SIDE */
+.login-side{
+    width:40%;
+}
+
+/* LOGIN CARD */
+.login-card{
+    width:100%;
+    max-width:500px;
+
+    padding:42px;
+
+    border-radius:34px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(120,190,255,0.18),
+        rgba(255,255,255,0.05)
+    );
+
+    border:1px solid rgba(180,220,255,0.18);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 0 35px rgba(120,190,255,0.18);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* TEXT */
+.card-small{
+    color:#d8efff;
+
+    letter-spacing:3px;
+    font-size:12px;
+
+    margin-bottom:12px;
+}
+
+.login-card h2{
+    font-size:44px;
+    margin-bottom:12px;
+}
+
+.login-desc{
+    color:rgba(255,255,255,0.72);
+
+    line-height:1.7;
+
+    margin-bottom:32px;
+}
+
+/* INPUT */
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:rgba(255,255,255,0.78);
+
+    font-size:14px;
+}
+
+.input-group input{
+    width:100%;
+
+    padding:16px 18px;
+
+    border:none;
+    outline:none;
+
+    border-radius:18px;
+
+    background:rgba(180,220,255,0.10);
+
+    border:1px solid rgba(180,220,255,0.18);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+.input-group input:focus{
+    border:1px solid rgba(220,240,255,0.30);
+
+    box-shadow:
+    0 0 18px rgba(160,220,255,0.18);
+}
+
+/* FILE */
+.upload-box{
+    width:100%;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    background:rgba(180,220,255,0.08);
+
+    border:1px dashed rgba(220,240,255,0.18);
+}
+
+/* ERROR BOX */
+.error-box{
+    width:100%;
+
+    margin-top:18px;
+    margin-bottom:10px;
+
+    padding:18px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,80,80,0.18),
+        rgba(255,255,255,0.05)
+    );
+
+    border:1px solid rgba(255,120,120,0.20);
+
+    backdrop-filter:blur(14px);
+
+    display:none;
+
+    align-items:flex-start;
+    gap:16px;
+
+    animation:fadeIn 0.3s ease;
+}
+
+/* ERROR ICON */
+.error-icon{
+    min-width:50px;
+    height:50px;
+
+    border-radius:16px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,80,80,0.18);
+
+    font-size:22px;
+}
+
+/* ERROR CONTENT */
+.error-content h3{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.error-content p{
+    color:rgba(255,255,255,0.74);
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+/* BUTTON */
+.login-btn{
+    width:100%;
+
+    padding:18px;
+
+    margin-top:10px;
+
+    border:none;
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #7cc8ff,
+        #b3e5ff
+    );
+
+    color:#082032;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:
+    0 0 28px rgba(120,190,255,0.35);
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 40px rgba(150,220,255,0.42);
+}
+
+/* BOTTOM */
+.bottom-text{
+    text-align:center;
+
+    margin-top:24px;
+
+    color:rgba(255,255,255,0.65);
+}
+
+.bottom-text a{
+    color:#d8efff;
+    text-decoration:none;
+}
+
+/* RIGHT */
+.right-side{
+    width:52%;
+}
+
+.hero-content{
+    max-width:620px;
+}
+
+.small-text{
+    color:#d8efff;
+
+    letter-spacing:3px;
+    font-size:13px;
+
+    margin-bottom:22px;
+}
+
+.hero-content h1{
+    font-size:78px;
+    line-height:1.05;
+
+    margin-bottom:26px;
+}
+
+.description{
+    color:rgba(255,255,255,0.72);
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    margin-bottom:42px;
+}
+
+/* FEATURE */
+.feature-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.feature-box{
+    width:260px;
+
+    padding:24px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.10),
+        rgba(255,255,255,0.04)
+    );
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(14px);
+
+    transition:0.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-5px);
+}
+
+.feature-box h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.feature-box p{
+    color:rgba(255,255,255,0.68);
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+
+    .main-container{
+        flex-direction:column;
+        padding:40px 25px;
+    }
+
+    .login-side,
+    .right-side{
+        width:100%;
+    }
+
+    .hero-content h1{
+        font-size:58px;
+    }
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:25px;
+    }
+
+    .hero-content h1{
+        font-size:44px;
+    }
+
+    .login-card{
+        padding:32px 24px;
+    }
+
+    .feature-grid{
+        flex-direction:column;
+    }
+
+    .feature-box{
+        width:100%;
+    }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | GUARD</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- BLUR -->
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        GUARD
+    </div>
+
+    <div class="nav-right">
+
+        <span class="user-name">
+            Welcome,
+            <span id="username">Guest</span>
+        </span>
+
+        <a href="index.html" class="logout-btn">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+
+    <!-- LEFT -->
+    <div class="hero-content">
+
+        <p class="small-text">
+            SMART HIKING DESTINATION
+        </p>
+
+        <h1>
+            Find The <br>
+            Perfect Mountain.
+        </h1>
+
+        <p class="description">
+            Discover mountain destinations with
+            smart hiking technology, weather insights,
+            and expedition safety recommendations.
+        </p>
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+    <div class="stat-card">
+        <h3>Safety</h3>
+        <p>Hypothermia Prevention</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Monitor</h3>
+        <p>Weather & Mountain Status</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Smart Card</h3>
+        <p>Digital Hiking Identity</p>
+    </div>
+
+</div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="mountain-panel">
+
+        <div class="panel-header">
+
+            <p class="panel-small">
+                EXPEDITION DESTINATION
+            </p>
+
+            <h2>
+                Select Mountain
+            </h2>
+
+        </div>
+
+        <!-- MOUNTAIN GRID -->
+        <div class="mountain-grid">
+
+            <div class="mountain-card"
+            onclick="selectMountain('Mount Rinjani')">
+
+                <h3>Mount Rinjani</h3>
+
+                <p>
+                    Lombok • 3726 mdpl
+                </p>
+
+            </div>
+
+            <div class="mountain-card"
+            onclick="selectMountain('Mount Semeru')">
+
+                <h3>Mount Semeru</h3>
+
+                <p>
+                    East Java • 3676 mdpl
+                </p>
+
+            </div>
+
+            <div class="mountain-card"
+            onclick="selectMountain('Mount Bromo')">
+
+                <h3>Mount Bromo</h3>
+
+                <p>
+                    East Java • 2329 mdpl
+                </p>
+
+            </div>
+
+            <div class="mountain-card"
+            onclick="selectMountain('Mount Merapi')">
+
+                <h3>Mount Merapi</h3>
+
+                <p>
+                    Central Java • 2911 mdpl
+                </p>
+
+            </div>
+
+            <div class="mountain-card"
+            onclick="selectMountain('Mount Agung')">
+
+                <h3>Mount Agung</h3>
+
+                <p>
+                    Bali • 3031 mdpl
+                </p>
+
+            </div>
+
+            <div class="mountain-card special-card">
+
+                <h3>More Mountains</h3>
+
+                <p>
+                    Coming Soon
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+
+// USERNAME
+let user = localStorage.getItem("username") || "Guest";
+
+document.getElementById("username").innerText = user;
+
+// SELECT MOUNTAIN
+function selectMountain(name){
+
+    localStorage.setItem(
+        "selectedMountain",
+        name
+    );
+
+    // REDIRECT BERDASARKAN GUNUNG
+    if(name === "Mount Semeru"){
+
+        window.location.href = "semeru.html";
+
+    }else if(name === "Mount Rinjani"){
+
+        window.location.href = "rinjani.html";
+
+    }else if(name === "Mount Bromo"){
+
+        window.location.href = "bromo.html";
+
+    }else if(name === "Mount Merapi"){
+
+        window.location.href = "merapi.html";
+
+    }else if(name === "Mount Agung"){
+
+        window.location.href = "agung.html";
+    }
+}
+</script>
+
+</body>
+</html>

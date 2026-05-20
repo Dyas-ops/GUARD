@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hiking Session | GUARD</title>
+
+<link rel="stylesheet" href="hiking.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- GLOW -->
+<div class="bg-glow glow1"></div>
+<div class="bg-glow glow2"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        GUARD
+    </div>
+
+    <div class="nav-right">
+
+        <div class="live-status">
+
+            <span class="live-dot"></span>
+
+            EXPEDITION ACTIVE
+
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- MAIN -->
+<section class="main-container">
+
+    <!-- LEFT -->
+    <div class="left-panel">
+
+        <p class="small-text">
+            SMART EXPEDITION INFORMATION SYSTEM
+        </p>
+
+        <h1 id="mountainName">
+            Mount Rinjani
+        </h1>
+
+        <p class="description">
+
+            Smart hiking information dashboard
+            designed to help hikers stay safer,
+            better prepared, and more aware
+            during mountain expeditions.
+
+        </p>
+
+        <!-- MAIN CARD -->
+        <div class="main-card">
+
+            <div class="main-top">
+
+                <div>
+
+                    <p class="label">
+                        Current Expedition Information
+                    </p>
+
+                    <h2 id="mainStatus">
+                        Mountain Safety Advisory
+                    </h2>
+
+                </div>
+
+                <div class="phase-box" id="phaseBox">
+                    Summit Attack Phase
+                </div>
+
+            </div>
+
+            <!-- INFO -->
+            <div class="expedition-info">
+
+                <div class="expedition-box">
+
+                    <p>Route Difficulty</p>
+
+                    <h3 id="routeDifficulty">
+                        Rocky & Steep Terrain
+                    </h3>
+
+                </div>
+
+                <div class="expedition-box">
+
+                    <p>Estimated Hiking Duration</p>
+
+                    <h3 id="duration">
+                        6–8 Hours
+                    </h3>
+
+                </div>
+
+                <div class="expedition-box">
+
+                    <p>Current Weather Alert</p>
+
+                    <h3 id="weatherAlert">
+                        Cold Wind Near Summit
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SMART CARD -->
+        <div class="smartcard-panel">
+
+            <div class="smartcard-left">
+
+                <p class="smartcard-label">
+                    DIGITAL EXPEDITION IDENTITY
+                </p>
+
+                <h2>
+                    Open Smart Hiking Card
+                </h2>
+
+                <p class="smartcard-description">
+
+                    Smart Hiking Card stores your
+                    hiking identity, mountain access,
+                    expedition information,
+                    and emergency hiking data
+                    in one integrated digital card.
+
+                </p>
+
+            </div>
+
+            <button onclick="openCard()" class="smartcard-btn">
+
+                Open Card
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-panel">
+
+        <!-- GRID -->
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <span>🌤</span>
+
+                <h3 id="weather">
+                    Windy & Foggy
+                </h3>
+
+                <p>Weather Condition</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <span>❄</span>
+
+                <h3 id="temperature">
+                    5–10°C
+                </h3>
+
+                <p>Temperature Zone</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <span>🧭</span>
+
+                <h3 id="route">
+                    Rocky Trail
+                </h3>
+
+                <p>Route Condition</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <span>⚠</span>
+
+                <h3 id="risk">
+                    HIGH
+                </h3>
+
+                <p>Hypothermia Risk</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <span>🎒</span>
+
+                <h3 id="gear">
+                    Thermal Layer
+                </h3>
+
+                <p>Recommended Gear</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <span>🔦</span>
+
+                <h3 id="visibility">
+                    Medium
+                </h3>
+
+                <p>Visibility Status</p>
+
+            </div>
+
+        </div>
+
+        <!-- AI PANEL -->
+        <div class="ai-panel">
+
+            <div class="ai-top">
+
+                <div class="ai-icon">
+                    AI
+                </div>
+
+                <div>
+
+                    <h2>
+                        Smart AI Recommendation
+                    </h2>
+
+                    <p>
+                        Expedition Safety Monitoring
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="ai-alert" id="aiAlert">
+
+                Cold wind intensity detected near summit.
+                Add additional thermal layers and reduce
+                resting time in exposed areas.
+
+            </div>
+
+        </div>
+
+        <!-- TIPS -->
+        <div class="tips-panel">
+
+            <h2>
+                🧠 Expedition Safety Tips
+            </h2>
+
+            <div class="tips-list">
+
+                <div class="tip-box" id="tip1">
+                    Avoid removing gloves in summit area.
+                </div>
+
+                <div class="tip-box" id="tip2">
+                    Rest every 40–60 minutes during ascent.
+                </div>
+
+                <div class="tip-box" id="tip3">
+                    Consume high-calorie food regularly.
+                </div>
+
+                <div class="tip-box" id="tip4">
+                    Monitor weather changes continuously.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+const selectedMountain =
+localStorage.getItem("selectedMountain");
+
+document.getElementById(
+    "mountainName"
+).innerText = selectedMountain;
+
+const mountainData = {
+
+"Mount Semeru":{
+
+    weather:"Cold & Windy",
+    temperature:"0–8°C",
+    route:"Long Rocky Trail",
+    risk:"HIGH",
+    gear:"Thermal Layer",
+    visibility:"Low",
+
+    difficulty:"Extreme Long Route",
+    duration:"8–10 Hours",
+    alert:"Extreme Cold Near Summit",
+
+    ai:"Extreme cold temperature and long trekking distance detected. Use thermal protection and avoid long resting periods near summit areas.",
+
+    tip1:"Bring extra thermal clothing.",
+    tip2:"Avoid hiking alone at night.",
+    tip3:"Consume emergency high-calorie food.",
+    tip4:"Prepare for strong summit wind."
+
+},
+
+"Mount Rinjani":{
+
+    weather:"Windy & Foggy",
+    temperature:"5–10°C",
+    route:"Rocky Trail",
+    risk:"HIGH",
+    gear:"Thermal Layer",
+    visibility:"Medium",
+
+    difficulty:"Steep Volcanic Route",
+    duration:"6–8 Hours",
+    alert:"Cold Wind Near Summit",
+
+    ai:"Cold wind intensity and low visibility detected near summit routes. Use additional thermal layers and maintain steady hydration.",
+
+    tip1:"Avoid open windy areas too long.",
+    tip2:"Bring backup warm layers.",
+    tip3:"Use flashlight in foggy conditions.",
+    tip4:"Monitor sudden weather changes."
+
+},
+
+"Mount Bromo":{
+
+    weather:"Sunny & Windy",
+    temperature:"10–15°C",
+    route:"Dusty Sandy Trail",
+    risk:"MEDIUM",
+    gear:"Dust Mask",
+    visibility:"High",
+
+    difficulty:"Easy Tourist Route",
+    duration:"2–4 Hours",
+    alert:"Volcanic Dust Exposure",
+
+    ai:"Strong wind and volcanic dust detected. Use masks or buffs to protect breathing during expedition.",
+
+    tip1:"Use scarf or dust mask.",
+    tip2:"Protect eyes from sand exposure.",
+    tip3:"Bring water in dry weather.",
+    tip4:"Use jacket before sunrise."
+
+},
+
+"Mount Merapi":{
+
+    weather:"Hot & Windy",
+    temperature:"10–20°C",
+    route:"Volcanic Route",
+    risk:"MEDIUM",
+    gear:"Respirator Mask",
+    visibility:"Medium",
+
+    difficulty:"Active Volcano Route",
+    duration:"5–7 Hours",
+    alert:"Volcanic Activity Monitoring",
+
+    ai:"Active volcanic activity detected around mountain zones. Monitor official hiking restrictions and use respiratory protection.",
+
+    tip1:"Avoid restricted summit zones.",
+    tip2:"Use mask against ash exposure.",
+    tip3:"Monitor volcanic status updates.",
+    tip4:"Bring sufficient water supply."
+
+},
+
+"Mount Agung":{
+
+    weather:"Cold & Dry",
+    temperature:"5–12°C",
+    route:"Steep Rocky Route",
+    risk:"HIGH",
+    gear:"Windproof Jacket",
+    visibility:"Medium",
+
+    difficulty:"Steep Sacred Trail",
+    duration:"7–9 Hours",
+    alert:"Strong Summit Wind",
+
+    ai:"Strong wind and steep terrain detected near summit routes. Use layered clothing and maintain hiking stamina.",
+
+    tip1:"Prepare for steep climbing sections.",
+    tip2:"Use windproof thermal layers.",
+    tip3:"Respect restricted sacred zones.",
+    tip4:"Avoid hiking during bad weather."
+
+}
+
+};
+
+const data = mountainData[selectedMountain];
+
+if(data){
+
+document.getElementById("weather").innerText =
+data.weather;
+
+document.getElementById("temperature").innerText =
+data.temperature;
+
+document.getElementById("route").innerText =
+data.route;
+
+document.getElementById("risk").innerText =
+data.risk;
+
+document.getElementById("gear").innerText =
+data.gear;
+
+document.getElementById("visibility").innerText =
+data.visibility;
+
+document.getElementById("routeDifficulty").innerText =
+data.difficulty;
+
+document.getElementById("duration").innerText =
+data.duration;
+
+document.getElementById("weatherAlert").innerText =
+data.alert;
+
+document.getElementById("aiAlert").innerText =
+data.ai;
+
+document.getElementById("tip1").innerText =
+data.tip1;
+
+document.getElementById("tip2").innerText =
+data.tip2;
+
+document.getElementById("tip3").innerText =
+data.tip3;
+
+document.getElementById("tip4").innerText =
+data.tip4;
+
+}
+
+function openCard(){
+
+    window.location.href = "smartcard.html";
+}
+
+</script>
+
+</body>
+</html>

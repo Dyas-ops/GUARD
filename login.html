@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | GUARD</title>
+
+<link rel="stylesheet" href="login.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- BLUR -->
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        GUARD
+    </div>
+
+    <a href="index.html" class="back-btn">
+        ← Back
+    </a>
+
+</nav>
+
+<!-- MAIN -->
+<section class="main-container">
+
+    <!-- LOGIN SIDE -->
+    <div class="login-side">
+
+        <div class="login-card">
+
+            <p class="card-small">
+                ACCESS ACCOUNT
+            </p>
+
+            <h2>
+                Welcome Back
+            </h2>
+
+            <p class="login-desc">
+                Continue your mountain expedition journey
+                with smarter hiking technology.
+            </p>
+
+            <!-- FORM -->
+            <form onsubmit="loginUser(event)">
+
+                <!-- FULL NAME -->
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <!-- FILE -->
+                <div class="input-group">
+
+                    <label>
+                        Student Card / National Identity Card
+                    </label>
+
+                    <div class="upload-box">
+                        <input type="file" required>
+                    </div>
+
+                </div>
+
+                <!-- ERROR BOX -->
+                <div id="errorBox" class="error-box">
+
+                    <div class="error-icon">
+                        ✕
+                    </div>
+
+                    <div class="error-content">
+
+                        <h3>Login Failed</h3>
+
+                        <p>
+                            Full Name or Email Address does not
+                            match with the registered account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit" class="login-btn">
+                    Login Account
+                </button>
+
+            </form>
+
+            <!-- BOTTOM -->
+            <p class="bottom-text">
+                Don’t have an account?
+                <a href="register.html">Register</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-side">
+
+        <div class="hero-content">
+
+            <p class="small-text">
+                SMART HIKING EXPERIENCE
+            </p>
+
+            <h1>
+                Explore Beyond <br>
+                The Clouds.
+            </h1>
+
+            <p class="description">
+                Integrated mountain monitoring,
+                smart hiking card system,
+                and expedition safety platform
+                for modern hikers.
+            </p>
+
+            <!-- FEATURES -->
+            <div class="feature-grid">
+
+                <div class="feature-box">
+                    <h3>Live Weather</h3>
+                    <p>Real-time mountain condition monitoring.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>Smart Hiking Card</h3>
+                    <p>Integrated digital hiking identity system.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>Emergency Alert</h3>
+                    <p>Early risk detection during expeditions.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+
+function loginUser(e){
+
+    e.preventDefault();
+
+    let inputName = document.getElementById("fullName").value;
+    let inputEmail = document.getElementById("email").value;
+
+    let savedName = localStorage.getItem("username");
+    let savedEmail = localStorage.getItem("email");
+
+    // HIDE ERROR
+    document.getElementById("errorBox").style.display = "none";
+
+    // VALIDATION
+    if(
+        inputName === savedName &&
+        inputEmail === savedEmail
+    ){
+
+        localStorage.setItem("username", savedName);
+
+        window.location.href = "dashboard.html";
+
+    }else{
+
+        document.getElementById("errorBox").style.display = "flex";
+    }
+}
+
+</script>
+
+</body>
+</html>

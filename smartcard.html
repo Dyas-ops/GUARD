@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Hiking Card | GUARD</title>
+
+<link rel="stylesheet" href="smartcard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- BG GLOW -->
+<div class="bg-glow glow1"></div>
+<div class="bg-glow glow2"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        GUARD
+    </div>
+
+    <a href="hiking.html" class="back-btn">
+        ← Back
+    </a>
+
+</nav>
+
+<!-- MAIN -->
+<section class="main-container">
+
+    <!-- SMART CARD -->
+    <div class="smart-card">
+
+        <!-- DECOR -->
+        <div class="card-decoration decor1"></div>
+        <div class="card-decoration decor2"></div>
+
+        <!-- TOP -->
+        <div class="card-top">
+
+            <div>
+
+                <p class="small-label">
+                    DIGITAL EXPEDITION CARD
+                </p>
+
+                <h2>
+                    Smart Hiking Card
+                </h2>
+
+                <p class="subtitle">
+                    Integrated Mountain Identity System
+                </p>
+
+            </div>
+
+            <!-- PROFILE -->
+            <label for="profileInput" class="profile-box">
+
+                <img id="profilePreview"
+                src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+
+                <input type="file"
+                id="profileInput"
+                accept="image/*">
+
+            </label>
+
+        </div>
+
+        <!-- GOLD CARD CANVAS -->
+        <div class="card-image">
+
+            <div class="shine"></div>
+
+        </div>
+
+        <!-- USER INFO -->
+        <div class="user-info">
+
+            <div class="info-box">
+
+                <p>Username</p>
+
+                <h3 id="username">
+                    Guest User
+                </h3>
+
+            </div>
+
+            <div class="info-box">
+
+                <p>Level</p>
+
+                <h3>
+                    Advanced Hiker
+                </h3>
+
+            </div>
+
+            <div class="info-box">
+
+                <p>Balance</p>
+
+                <h3>
+                    Rp 150.000
+                </h3>
+
+            </div>
+
+        </div>
+
+        <!-- STATUS -->
+        <div class="sleepingbag-box">
+
+            <div class="sleeping-left">
+
+                <div class="green-dot"></div>
+
+                <div>
+
+                    <p class="sleeping-label">
+                        Sleeping Bag Status
+                    </p>
+
+                    <h3>
+                        Currently In Use
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <span class="sleeping-icon">
+                🛌
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+/* USERNAME */
+const savedUser =
+localStorage.getItem("username");
+
+if(savedUser){
+
+    document.getElementById(
+        "username"
+    ).innerText = savedUser;
+}
+
+/* PROFILE PHOTO */
+const profileInput =
+document.getElementById("profileInput");
+
+const profilePreview =
+document.getElementById("profilePreview");
+
+profileInput.addEventListener("change", function(){
+
+    const file =
+    this.files[0];
+
+    if(file){
+
+        const reader =
+        new FileReader();
+
+        reader.onload = function(e){
+
+            profilePreview.src =
+            e.target.result;
+
+            localStorage.setItem(
+                "profilePhoto",
+                e.target.result
+            );
+        }
+
+        reader.readAsDataURL(file);
+    }
+});
+
+/* LOAD PHOTO */
+const savedPhoto =
+localStorage.getItem("profilePhoto");
+
+if(savedPhoto){
+
+    profilePreview.src =
+    savedPhoto;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register | GUARD</title>
+
+<link rel="stylesheet" href="register.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- BACKGROUND BLUR -->
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        GUARD
+    </div>
+
+    <a href="index.html" class="back-btn">
+        ← Back
+    </a>
+
+</nav>
+
+<!-- MAIN -->
+<section class="main-container">
+
+    <!-- LEFT SIDE -->
+    <div class="left-side">
+
+        <p class="small-text">
+            SMART HIKING SAFETY SYSTEM
+        </p>
+
+        <h1>
+            Start Your <br>
+            Adventure <br>
+            With Confidence.
+        </h1>
+
+        <p class="description">
+            Modern mountain safety platform designed
+            for smarter expeditions, safer hiking,
+            and better outdoor experiences.
+        </p>
+
+        <!-- FLOATING CARDS -->
+        <div class="floating-cards">
+
+            <div class="mini-card">
+                <h3>3726 mdpl</h3>
+                <p>Mount Rinjani</p>
+            </div>
+
+            <div class="mini-card">
+                <h3>AI Weather</h3>
+                <p>Live Mountain Monitoring</p>
+            </div>
+
+            <div class="mini-card">
+                <h3>Hypothermia</h3>
+                <p>Early Warning Detection</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-side">
+
+        <div class="register-card">
+
+            <p class="card-small">
+                CREATE ACCOUNT
+            </p>
+
+            <h2>
+                Register
+            </h2>
+
+            <form onsubmit="registerUser(event)">
+
+                <!-- FULL NAME -->
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+
+                <!-- AGE -->
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" id="age" required>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <!-- HEALTH -->
+                <div class="input-group">
+                    <label>Health History</label>
+                    <input type="text" id="health" required>
+                </div>
+
+                <!-- FILE -->
+                <div class="input-group">
+
+                    <label>
+                        Student Card / National Identity Card
+                    </label>
+
+                    <div class="upload-box">
+                        <input type="file" required>
+                    </div>
+
+                </div>
+
+                <!-- WARNING BOX -->
+                <div id="warningBox" class="warning-box">
+
+                    <div class="warning-icon">
+                        ⚠
+                    </div>
+
+                    <div class="warning-content">
+
+                        <h3>High Risk Condition Detected</h3>
+
+                        <p>
+                            Your health history may increase
+                            mountain hiking risks due to cold
+                            temperatures and low oxygen levels.
+                        </p>
+
+                        <div class="warning-buttons">
+
+                            <button
+                                type="button"
+                                class="cancel-btn"
+                                onclick="cancelRisk()">
+
+                                Cancel
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="continue-btn"
+                                onclick="continueRisk()">
+
+                                Continue Anyway
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit" class="register-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <!-- BOTTOM -->
+            <p class="bottom-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+
+function registerUser(e){
+
+    e.preventDefault();
+
+    // INPUT
+    let fullName = document.getElementById("fullName").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+    let health = document.getElementById("health").value.toLowerCase();
+
+    // SAVE DATA
+    localStorage.setItem("username", fullName);
+    localStorage.setItem("age", age);
+    localStorage.setItem("email", email);
+    localStorage.setItem("health", health);
+
+    // RISK LIST
+    let dangerous = [
+
+        "asthma",
+        "chronic asthma",
+        "bronchitis",
+        "pneumonia",
+        "lung disease",
+        "copd",
+        "shortness of breath",
+
+        "heart disease",
+        "heart failure",
+        "arrhythmia",
+        "coronary artery disease",
+        "cardiovascular disease",
+
+        "hypertension",
+        "high blood pressure",
+        "hypotension",
+
+        "epilepsy",
+        "stroke",
+        "seizure disorder",
+
+        "diabetes",
+        "anemia",
+        "hypoglycemia",
+
+        "panic disorder",
+        "anxiety disorder",
+
+        "altitude sickness",
+        "vertigo",
+
+        "kidney disease",
+        "liver disease",
+        "sleep apnea"
+    ];
+
+    // CHECK RISK
+    let risk = dangerous.some(
+        word => health.includes(word)
+    );
+
+    if(risk){
+
+        document.getElementById(
+            "warningBox"
+        ).style.display = "flex";
+
+    }else{
+
+        localStorage.setItem(
+            "riskStatus",
+            "SAFE"
+        );
+
+        window.location.href = "login.html";
+    }
+}
+
+// CONTINUE
+function continueRisk(){
+
+    localStorage.setItem(
+        "riskStatus",
+        "HIGH RISK"
+    );
+
+    window.location.href = "login.html";
+}
+
+// CANCEL
+function cancelRisk(){
+
+    document.getElementById(
+        "warningBox"
+    ).style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

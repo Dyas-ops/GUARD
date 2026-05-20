@@ -1,0 +1,411 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(5,10,20,0.82),
+        rgba(5,10,20,0.94)
+    ),
+    url("indonesia.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    color:white;
+    position:relative;
+}
+
+/* GLOW */
+.bg-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.glow1{
+    width:320px;
+    height:320px;
+
+    background:rgba(255,215,0,0.16);
+
+    top:-100px;
+    left:-100px;
+}
+
+.glow2{
+    width:360px;
+    height:360px;
+
+    background:rgba(255,240,180,0.14);
+
+    bottom:-120px;
+    right:-120px;
+}
+
+/* NAVBAR */
+.navbar{
+    width:100%;
+    padding:30px 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative;
+    z-index:10;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(10px);
+
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:rgba(255,255,255,0.14);
+}
+
+/* MAIN */
+.main-container{
+    width:100%;
+    min-height:85vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px 60px;
+
+    position:relative;
+    z-index:2;
+}
+
+/* SMART CARD */
+.smart-card{
+    width:100%;
+    max-width:560px;
+
+    padding:34px;
+
+    border-radius:38px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,215,90,0.22),
+        rgba(212,175,55,0.10),
+        rgba(255,255,255,0.06)
+    );
+
+    border:1px solid rgba(255,255,255,0.16);
+
+    backdrop-filter:blur(22px);
+
+    box-shadow:
+    0 20px 60px rgba(212,175,55,0.18),
+    0 10px 35px rgba(0,0,0,0.24);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* DECOR */
+.card-decoration{
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+}
+
+.decor1{
+    width:180px;
+    height:180px;
+
+    background:rgba(255,215,0,0.20);
+
+    top:-60px;
+    right:-60px;
+}
+
+.decor2{
+    width:140px;
+    height:140px;
+
+    background:rgba(255,240,180,0.14);
+
+    bottom:-40px;
+    left:-40px;
+}
+
+/* TOP */
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:28px;
+
+    position:relative;
+    z-index:2;
+}
+
+.small-label{
+    color:#fff0b3;
+
+    letter-spacing:2px;
+    font-size:12px;
+
+    margin-bottom:10px;
+}
+
+.card-top h2{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    color:rgba(255,255,255,0.76);
+    font-size:14px;
+}
+
+/* PROFILE */
+.profile-box{
+    width:82px;
+    height:82px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border:2px solid rgba(255,255,255,0.16);
+
+    background:rgba(255,255,255,0.08);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.profile-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.profile-box input{
+    display:none;
+}
+
+/* GOLD CARD */
+.card-image{
+    width:100%;
+    height:250px;
+
+    border-radius:34px;
+
+    margin-bottom:28px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f5e6a8 0%,
+        #d4af37 30%,
+        #fff4c9 55%,
+        #b8860b 100%
+    );
+
+    box-shadow:
+    inset 0 0 40px rgba(255,255,255,0.22),
+    0 18px 45px rgba(212,175,55,0.24);
+
+    border:1px solid rgba(255,255,255,0.20);
+}
+
+/* SHINE */
+.shine{
+    position:absolute;
+
+    width:220px;
+    height:420px;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.38),
+        rgba(255,255,255,0)
+    );
+
+    transform:rotate(25deg);
+
+    top:-80px;
+    left:-60px;
+
+    filter:blur(8px);
+
+    opacity:0.7;
+}
+
+/* USER INFO */
+.user-info{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+    margin-bottom:24px;
+}
+
+.info-box{
+    padding:20px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,0.10);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(12px);
+}
+
+.info-box p{
+    color:rgba(255,255,255,0.70);
+
+    font-size:13px;
+
+    margin-bottom:10px;
+}
+
+.info-box h3{
+    font-size:18px;
+}
+
+/* STATUS */
+.sleepingbag-box{
+    width:100%;
+
+    padding:24px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(40,255,140,0.16),
+        rgba(255,255,255,0.08)
+    );
+
+    border:1px solid rgba(255,255,255,0.10);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.sleeping-left{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.green-dot{
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    box-shadow:0 0 14px #22c55e;
+}
+
+.sleeping-label{
+    color:rgba(255,255,255,0.72);
+
+    margin-bottom:6px;
+
+    font-size:13px;
+}
+
+.sleeping-left h3{
+    font-size:22px;
+}
+
+.sleeping-icon{
+    font-size:34px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .navbar{
+        padding:25px;
+    }
+
+    .smart-card{
+        padding:26px;
+    }
+
+    .user-info{
+        grid-template-columns:1fr;
+    }
+
+    .card-top{
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:20px;
+    }
+
+    .card-top h2{
+        font-size:30px;
+    }
+
+    .card-image{
+        height:200px;
+    }
+
+    .sleepingbag-box{
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:18px;
+    }
+}
